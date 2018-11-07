@@ -1,8 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Elsie+Swash+Caps:400,900);
 @import url(http://fonts.googleapis.com/css?family=Clicker+Script);
 
-/* This 
-is 
+/* This
+is
 a comment! */
 
 /* CSS Syntax:
@@ -41,10 +41,6 @@ figcaption {
 
 /* ID selector (apply to one unique element per page) */
 
-#logo { /* select elements with id="logo" */
-  background: aqua;
-}
-
 /* Descendent Selector */
 
 #logo h1 { /* selects <h1> if inside the id="logo" */
@@ -69,4 +65,81 @@ figcaption {
 
 #details a:active {
   color: red;
+}
+/*MEDIA*/
+img, video, audio {
+  max-width: 100%;
+}
+/* style Layout */
+
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.wrapper {
+  width:  1080px;
+  margin: 0 auto;
+  background-color: #eee;
+}
+
+.col-1 { /*making collums and applying to html. This is a 3 collum spacing. so each box is 32% and each margin is 2%. 2+32+2+32+2+32+2 = 100*/
+  float: left;
+  width: 32%;
+  /* background: :#ccc; */
+}
+.col-2 {/* making a collum that takes up 2 collums. one collum is 32, so 2 is 64 + the margin that does not exit in between.*/
+  float: left;
+  width: 66%;
+  /* background: :#ccc; */
+}
+.col-3{
+  /*just spans the whole bar taking up 100%, which is it bt defalut.*/
+  /* background: :#ccc; */
+}
+
+[class*="col-"] { /*anything that has a class with a value startting with "col-" is selected, so appliying to the above 3 */
+  margin-left: 2%;
+}
+
+.first { /*we want the first collum to not have a margin*/
+  margin-left: 0%;
+}
+
+.cleatfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}
+/* SECTION */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 1;
+}
+section {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+/* SOCAIL*/
+#social {
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  width: 40px;
+  z-index: 1
+}
+
+#social a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: yellow;
 }
